@@ -16,3 +16,5 @@ const changeForF = (numC)=>{
 console.log(changeForC(212));
 console.log(changeForF(100));
 
+
+
