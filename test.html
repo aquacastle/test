@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>get h3 test</title>
+	<style>
+		h3:before{
+			content: attr(data-index)"";
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+
+<div>
+	<h3 data-index="">test1</h3>
+	<p>test</p>
+	<h3 data-index="">test2</h3>
+	<p>test</p>
+	<h3 data-index="">test3</h3>
+	<p>test</p>
+</div>
+
+<script>
+	const getH3 = ()=>{
+		let num;
+		let i;
+		const allH3 = document.querySelectorAll("h3");
+		for(i = 0; i <= allH3.length; i++ ){
+			num = allH3[i].dataset;
+			num.index = Number([i])+1;
+		}
+	};
+	getH3();
+
+</script>
+</body>
+</html>
